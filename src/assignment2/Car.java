@@ -22,8 +22,7 @@ public class Car
      */
     public int getMaxKilometersPerHour()
     {
-        //TODO Implement this method
-        throw new UnsupportedOperationException();
+        return this.maxKilometersPerHour;
     }
 
     /**
@@ -34,8 +33,9 @@ public class Car
      */
     public void setMaxKilometersPerHour(int maxKilometersPerHour)
     {
-        //TODO Implement this method
-        throw new UnsupportedOperationException();
+        if(maxKilometersPerHour > 0 && maxKilometersPerHour < 300) {
+            this.maxKilometersPerHour = maxKilometersPerHour;
+        }
     }
 
     /**
@@ -44,8 +44,7 @@ public class Car
      */
     public String getManufactor()
     {
-        //TODO Implement this method
-        throw new UnsupportedOperationException();
+        return this.manufactor;
     }
 
     /**
@@ -56,8 +55,8 @@ public class Car
      */
     public void setManufactor(String manufactor)
     {
-        //TODO Implement this method
-        throw new UnsupportedOperationException();
+        if(manufactor != null && manufactor != "")
+            this.manufactor = manufactor;
     }
 
     /**
@@ -66,8 +65,7 @@ public class Car
      */
     public double getPrice()
     {
-        //TODO Implement this method
-        throw new UnsupportedOperationException();
+        return this.price;
     }
 
     /**
@@ -78,8 +76,8 @@ public class Car
      */
     public void setPrice(double price)
     {
-        //TODO Implement this method
-        throw new UnsupportedOperationException();
+        if(price > 0)
+            this.price = price;
     }
 
 }
