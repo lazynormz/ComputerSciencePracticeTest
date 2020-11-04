@@ -83,6 +83,7 @@ public class CarDealerShip
     */    
     public void sortCarsByPrice()
     {
+        //Sorts to objects (o1, o2) on a value, and sorts on that
         carsForSale.sort((o1, o2) -> (int) (o1.getPrice() - o2.getPrice()));
     }
     
@@ -91,6 +92,7 @@ public class CarDealerShip
     */    
     public void sortCarsByMaxSpeed()
     {
+        //Lambda function for sorting. See @sortCarsByPrice for explanation on lambda
         carsForSale.sort(Comparator.comparingInt(Car::getMaxKilometersPerHour));
     }
     
@@ -100,7 +102,7 @@ public class CarDealerShip
      */
     public Car presentRandomCarToCustomer()
     {
-        Random r = new Random();
+        Random r = new Random();    //Used to generate random numbers.
         return carsForSale.get(r.nextInt(carsForSale.size()));
     }
 
