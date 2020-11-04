@@ -88,7 +88,7 @@ public class CarDealerShip
     */    
     public void sortCarsByPrice()
     {
-        //Sorts to objects (o1, o2) on a value, and sorts on that
+        //Sorts the objects (o1, o2) on the value from getPrice(), and sorts on that
         carsForSale.sort((o1, o2) -> (int) (o1.getPrice() - o2.getPrice()));
     }
     
