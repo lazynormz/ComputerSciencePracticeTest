@@ -18,8 +18,6 @@ public class CarDealerShip
 {
 
     private List<Car> carsForSale = new ArrayList<>();
-
-    
     
     /**
      * Adds another car for sale but only if the value is not null, and only if
@@ -40,6 +38,8 @@ public class CarDealerShip
     public double getTotalCarValues()
     {
         double sum = 0;
+
+        //Add up the sum of ALL cars into the variable named 'sum'
         for(Car car : carsForSale){
             sum += car.getPrice();
         }
@@ -48,11 +48,14 @@ public class CarDealerShip
     
     /**
      * Gets the cheapest car from the list ov cars for sale.
-     * @return the cheapest car from the list ov cars for sale.
+     * @return the cheapest car from the list of cars for sale.
      */
     public Car getCheapestCar()
     {
         Car cheapestCar = carsForSale.get(0);
+
+        //Look at every car that is available. If any of the cars' price are
+        //lower than the current 'cheapestCar's price, that car is now the cheapest
         for(Car car : carsForSale) {
             if(cheapestCar.getPrice() > car.getPrice())
                 cheapestCar = car;
@@ -61,7 +64,8 @@ public class CarDealerShip
     }
     
     /**
-     * Sells the car in the parameter.
+     * Sells the car in the parameter - removes it from the list.
+     *
      * @param car The car to be sold.
      */
     public void sellCar(Car car)
@@ -70,7 +74,8 @@ public class CarDealerShip
     }
 
     /**
-     * Nothing to do here
+     * Return the list containing the cars that the dealership has for sale
+     *
      * @return List<car>
      */
     public List<Car> getCarsForSale()
